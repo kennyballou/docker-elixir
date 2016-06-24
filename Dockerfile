@@ -1,5 +1,5 @@
 # DOCKER-VERSION 1.9.1
-FROM kennyballou/docker-erlang:18.3.3
+FROM kennyballou/docker-erlang:19.0
 MAINTAINER kballou@devnulllabs.io
 
 ENV ELIXIR_VERSION=1.3.0
