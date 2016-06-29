@@ -2,7 +2,7 @@
 FROM kennyballou/docker-erlang:19.0
 MAINTAINER kballou@devnulllabs.io
 
-ENV ELIXIR_VERSION=1.3.0
+ENV ELIXIR_VERSION=1.3.1
 
 RUN apk update \
     && apk add \
@@ -17,7 +17,7 @@ RUN apk update \
        openssl-dev \
        tar \
     && ELIXIR_SRC_URL="https://github.com/elixir-lang/elixir/archive/v$ELIXIR_VERSION.tar.gz" \
-    && ELIXIR_SRC_SUM="66cb8448dd60397cad11ba554c2613f732192c9026468cff55e8347a5ae4004a" \
+    && ELIXIR_SRC_SUM="c4ab90a0d8d7ed4159dd6b7e1bcbcdbdb8c6177a35328d774fccf00346b4b42c" \
     && curl -fSL "$ELIXIR_SRC_URL" -o elixir.tar.gz \
     && echo "${ELIXIR_SRC_SUM}  elixir.tar.gz" | sha256sum -c - \
     && mkdir -p /usr/src/elixir-src \
